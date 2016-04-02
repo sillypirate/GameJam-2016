@@ -11,6 +11,11 @@ public class PlayerMover : MonoBehaviour {
 	public GameObject deathParticle;
 	public bool sliding;
 	public float slideTime;
+	public bool onGround;
+	public float lastY;
+	public GameObject runAnim;
+	public GameObject jumpAnim;
+	public GameObject dashAnim;
 
 	// Use this for initialization
 	void Start () {
@@ -23,18 +28,32 @@ public class PlayerMover : MonoBehaviour {
 		BoxCollider selfB = self.GetComponent<BoxCollider>();
 
 
-		if (Input.GetKeyDown (KeyCode.W)) {
+		if (Input.GetKeyDown (KeyCode.W) && onGround) {
 			rb.AddForce (transform.up*500);
 			sliding = false;
 			slideTime = 0;
 		}
-			
+
+		if (GameController.dashing) {
+			runAnim.SetActive (false);
+			jumpAnim.SetActive (false);
+			dashAnim.SetActive (true);
+		} else if (onGround) {
+			runAnim.SetActive (true);
+			jumpAnim.SetActive (false);
+			dashAnim.SetActive (false);
+		} else {
+			runAnim.SetActive (false);
+			jumpAnim.SetActive (true);
+			dashAnim.SetActive (false);
+		}
+
 
 		if (sliding) {
-			selfB.size = new Vector3 (1, 0.5f, 1);
+			selfB.size = new Vector3 (.8f, 0.5f, 1);
 			slideTime -= Time.deltaTime;
 		} else {
-			selfB.size = new Vector3 (1, 1f, 1);
+			selfB.size = new Vector3 (.8f, 1f, 1);
 		}
 
 		if (slideTime <= 0) {
@@ -56,6 +75,13 @@ public class PlayerMover : MonoBehaviour {
 		//if (this.gameObject.transform.position.x >= 10) {
 		//	self.transform.position = new Vector2 (-9.5f, this.gameObject.transform.position.y);
 		//}
+		/*if (self.transform.position.y == lastY) {
+			onGround = true;
+		} else {
+			onGround = false;
+		}
+		lastY = self.transform.position.y;*/
+
 
 	}
 
@@ -67,13 +93,31 @@ public class PlayerMover : MonoBehaviour {
 			}
 		}
 
-		if (col.gameObject.tag == "Enemy") {
+		if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Hazard") {
 			if (GameController.dashing) {
 				Destroy (col.gameObject);
 			} else {
 				youLose ();
 			}
 		}
+	}
+
+	void OnCollisionEnter (Collision coll){
+		if (coll.gameObject.tag == "Platform") {
+			onGround = true;
+		} 
+	}
+
+	void OnCollisionExit (Collision coll){
+		if (coll.gameObject.tag == "Platform") {
+			onGround = false;
+		} 
+	}
+
+	void OnCollisionStay (Collision coll){
+		if (coll.gameObject.tag == "Platform") {
+			onGround = true;
+		} 
 	}
 
 	void youLose(){

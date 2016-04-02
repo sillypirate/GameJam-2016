@@ -45,8 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\EnemyDestroy.cs" />
      <Compile Include="Assets\Scritps\CamerMover.cs" />
      <Compile Include="Assets\Scritps\GameController.cs" />
+     <Compile Include="Assets\Scritps\GameOverButtons.cs" />
      <Compile Include="Assets\Scritps\PlatformMover.cs" />
      <Compile Include="Assets\Scritps\PlayerMover.cs" />
      <Compile Include="Assets\Scritps\SpawnTrigger.cs" />

@@ -6,7 +6,9 @@ public class PlayerMover : MonoBehaviour {
 	public bool player;
 	public Rigidbody rb;
 	public GameObject self;
+	public GameObject other;
 	public bool top;
+	public GameObject deathParticle;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +25,7 @@ public class PlayerMover : MonoBehaviour {
 			rb.AddForce (transform.up*500);
 		}
 			
+			
 
 		//if (this.gameObject.transform.position.x >= 10) {
 		//	self.transform.position = new Vector2 (-9.5f, this.gameObject.transform.position.y);
@@ -31,9 +34,24 @@ public class PlayerMover : MonoBehaviour {
 	}
 
 	void OnTriggerEnter (Collider col){
-		if (top) {
-			Destroy (col.gameObject);
-			GameObject.Find ("Game Manager").GetComponent<GameController> ().newSpawn ();
+		if (col.gameObject.tag == "Spawn Trigger"){
+			if (top) {
+				Destroy (col.gameObject);
+				GameObject.Find ("Game Manager").GetComponent<GameController> ().newSpawn ();
+			}
 		}
+
+		if (col.gameObject.tag == "Enemy") {
+			if (GameController.dashing) {
+				Destroy (col.gameObject);
+			} else {
+				youLose ();
+			}
+		}
+	}
+
+	void youLose(){
+		GameController.gameOver = true;
+		Destroy (self);
 	}
 }

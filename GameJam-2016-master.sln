@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{D89E28DA-B414-DCAB-9FCB-89A694173AB5}") = "GameJam-2016-master", "Assembly-CSharp-firstpass.csproj", "{324B1099-E0E8-57FE-5DB2-87D64BD0B276}"
+EndProject
+Project("{D89E28DA-B414-DCAB-9FCB-89A694173AB5}") = "GameJam-2016-master", "Assembly-CSharp.csproj", "{9FAACCDA-5A33-B0D4-6682-044D60360A3A}"
+EndProject
+Project("{D89E28DA-B414-DCAB-9FCB-89A694173AB5}") = "GameJam-2016-master", "Assembly-CSharp-Editor.csproj", "{42AFAE92-4B7E-90ED-4267-E3CFAC9A2DDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{324B1099-E0E8-57FE-5DB2-87D64BD0B276}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{324B1099-E0E8-57FE-5DB2-87D64BD0B276}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{324B1099-E0E8-57FE-5DB2-87D64BD0B276}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{324B1099-E0E8-57FE-5DB2-87D64BD0B276}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FAACCDA-5A33-B0D4-6682-044D60360A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FAACCDA-5A33-B0D4-6682-044D60360A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FAACCDA-5A33-B0D4-6682-044D60360A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FAACCDA-5A33-B0D4-6682-044D60360A3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42AFAE92-4B7E-90ED-4267-E3CFAC9A2DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42AFAE92-4B7E-90ED-4267-E3CFAC9A2DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42AFAE92-4B7E-90ED-4267-E3CFAC9A2DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42AFAE92-4B7E-90ED-4267-E3CFAC9A2DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

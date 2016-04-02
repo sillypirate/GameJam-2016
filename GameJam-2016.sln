@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{B1D7A72B-1388-57C8-50CD-BE6DF5D4029E}") = "GameJam-2016", "Assembly-CSharp-firstpass.csproj", "{F56E760F-1E9B-96CC-3862-9ACF59F2C568}"
+EndProject
+Project("{B1D7A72B-1388-57C8-50CD-BE6DF5D4029E}") = "GameJam-2016", "Assembly-CSharp.csproj", "{F58F81C9-7ED3-7B05-CD4B-EC6FF5095B5D}"
+EndProject
+Project("{B1D7A72B-1388-57C8-50CD-BE6DF5D4029E}") = "GameJam-2016", "Assembly-CSharp-Editor.csproj", "{9BBD9A88-EA8B-7ABC-47C4-58237E48A213}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F56E760F-1E9B-96CC-3862-9ACF59F2C568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56E760F-1E9B-96CC-3862-9ACF59F2C568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56E760F-1E9B-96CC-3862-9ACF59F2C568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56E760F-1E9B-96CC-3862-9ACF59F2C568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F58F81C9-7ED3-7B05-CD4B-EC6FF5095B5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F58F81C9-7ED3-7B05-CD4B-EC6FF5095B5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F58F81C9-7ED3-7B05-CD4B-EC6FF5095B5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F58F81C9-7ED3-7B05-CD4B-EC6FF5095B5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BBD9A88-EA8B-7ABC-47C4-58237E48A213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BBD9A88-EA8B-7ABC-47C4-58237E48A213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BBD9A88-EA8B-7ABC-47C4-58237E48A213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BBD9A88-EA8B-7ABC-47C4-58237E48A213}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

@@ -12,6 +12,9 @@ public class GameController : MonoBehaviour {
 	public float dashCharge;
 	public GameObject[] platformList;
 	public GameObject[] platformsPrefabs;
+	public static bool gameOver;
+	public GameObject gameOverPanel;
+	public float gameOverTimer;
 
 
 	// Use this for initialization
@@ -20,6 +23,7 @@ public class GameController : MonoBehaviour {
 		dashCharge = 2;
 		platformList[0] =  (GameObject.Find("FirstPlat"));
 		platformList[1] =  (GameObject.Find("SecondPlat"));
+		gameOverTimer = 3;
 
 	}
 	
@@ -43,6 +47,15 @@ public class GameController : MonoBehaviour {
 			dashTime = 0.5f;
 			dashCharge = 0;
 		}
+
+		if (gameOver) {
+			gameOverTimer -= Time.unscaledDeltaTime;
+			if (gameOverTimer <= 0) {
+				gameOverPanel.SetActive (true);
+			}
+		}
+
+
 
 	}
 

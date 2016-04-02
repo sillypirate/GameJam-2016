@@ -7,19 +7,23 @@ public class PlatformMover : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
 		if (GameController.dashing) {
-			rate = 5;
+			rate = 3;
+		} else if(GameController.gameOver){ 
+			rate = 0;
 		} else {
-			rate = 20;
+			rate = 1;
 		}
+			
 
-		this.gameObject.transform.Translate (Vector2.left / rate);
+
+		this.gameObject.transform.Translate ((Vector2.left / 10) * rate);
 
 	}
 

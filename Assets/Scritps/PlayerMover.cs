@@ -16,6 +16,8 @@ public class PlayerMover : MonoBehaviour {
 	public GameObject runAnim;
 	public GameObject jumpAnim;
 	public GameObject dashAnim;
+	public GameObject slideAnim;
+	public GameObject guardAnim;
 
 	// Use this for initialization
 	void Start () {
@@ -38,14 +40,32 @@ public class PlayerMover : MonoBehaviour {
 			runAnim.SetActive (false);
 			jumpAnim.SetActive (false);
 			dashAnim.SetActive (true);
+			slideAnim.SetActive (false);
+			guardAnim.SetActive (false);
+		} else if (GameController.guarding){
+			runAnim.SetActive (false);
+			jumpAnim.SetActive (false);
+			dashAnim.SetActive (false);
+			slideAnim.SetActive (false);
+			guardAnim.SetActive (true);
+		} else if (sliding){
+			runAnim.SetActive (false);
+			jumpAnim.SetActive (false);
+			dashAnim.SetActive (false);
+			slideAnim.SetActive (true);
+			guardAnim.SetActive (false);
 		} else if (onGround) {
 			runAnim.SetActive (true);
 			jumpAnim.SetActive (false);
 			dashAnim.SetActive (false);
+			slideAnim.SetActive (false);
+			guardAnim.SetActive (false);
 		} else {
 			runAnim.SetActive (false);
 			jumpAnim.SetActive (true);
 			dashAnim.SetActive (false);
+			slideAnim.SetActive (false);
+			guardAnim.SetActive (false);
 		}
 
 
@@ -93,12 +113,16 @@ public class PlayerMover : MonoBehaviour {
 			}
 		}
 
-		if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Hazard") {
+		if (col.gameObject.tag == "Enemy") {
 			if (GameController.dashing) {
 				Destroy (col.gameObject);
 			} else {
 				youLose ();
 			}
+		}
+
+		if (col.gameObject.tag == "Hazard") {
+			youLose ();
 		}
 	}
 

@@ -10,11 +10,16 @@ public class GameController : MonoBehaviour {
 	public static bool guarding;
 	public float dashTime;
 	public float dashCharge;
+	public float guardTime;
+	public float guardCharge;
 	public GameObject[] platformList;
 	public GameObject[] platformsPrefabs;
+	public GameObject backgoundScroll;
+	public GameObject[] backgroundList;
 	public static bool gameOver;
 	public GameObject gameOverPanel;
 	public float gameOverTimer;
+	public float bgSpawnCount;
 
 
 	// Use this for initialization
@@ -24,6 +29,7 @@ public class GameController : MonoBehaviour {
 		platformList[0] =  (GameObject.Find("FirstPlat"));
 		platformList[1] =  (GameObject.Find("SecondPlat"));
 		gameOverTimer = 3;
+		bgSpawnCount = 1;
 
 	}
 	
@@ -46,6 +52,26 @@ public class GameController : MonoBehaviour {
 			dashing = true;
 			dashTime = 0.5f;
 			dashCharge = 0;
+			guarding = false;
+			guardTime = 0;
+		}
+
+		if (guardCharge < .5f) {
+			guardCharge += Time.deltaTime;
+		}
+
+		if (guarding) {
+			guardTime -= Time.deltaTime;
+		}
+
+		if (guardTime < 0) {
+			guarding = false;
+		}
+
+		if (Input.GetKeyDown (KeyCode.A) && !dashing && guardCharge >= .5f && !guarding) {
+			guarding = true;
+			guardTime = 0.5f;
+			guardCharge = 0;
 		}
 
 		if (gameOver) {
@@ -68,6 +94,18 @@ public class GameController : MonoBehaviour {
 		platformList [0] = platformList [1];
 		platformList [1] = platformList [2];
 		platformList [2] = null;
+		if (bgSpawnCount == 2) {
+			GameObject backgoundClone = (Instantiate (backgoundScroll, new Vector3 (80f, 4.56356f, -0.53f), Quaternion.identity) as GameObject);
+			backgroundList [3] = backgoundClone;
+			Destroy (backgroundList[0]);
+			backgroundList [0] = backgroundList [1];
+			backgroundList [1] = backgroundList [2];
+			backgroundList [2] = backgroundList [3];
+			backgroundList [3] = null;
+			bgSpawnCount = 0;
+		}
+		bgSpawnCount += 1;
+
 	}
 
 	

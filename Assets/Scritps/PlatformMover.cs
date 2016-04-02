@@ -14,7 +14,7 @@ public class PlatformMover : MonoBehaviour {
 	void Update () {
 	
 		if (GameController.dashing) {
-			rate = 4;
+			rate = 3;
 		} else if(GameController.gameOver){ 
 			rate = 0;
 		} else {

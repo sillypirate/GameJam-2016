@@ -80,3 +80,5 @@ C:\Users\Matt Collins\Documents\Paperboy Interactive\GameJam 2016\Temp\bin\Debug
 C:\Users\Matt Collins\Documents\Paperboy Interactive\GameJam 2016\obj\Debug\Assembly-CSharp-Editor.csprojResolveAssemblyReference.cache
 C:\Users\Matt Collins\Documents\Paperboy Interactive\GameJam 2016\obj\Debug\Assembly-CSharp-Editor.dll
 C:\Users\Matt Collins\Documents\Paperboy Interactive\GameJam 2016\obj\Debug\Assembly-CSharp-Editor.pdb
+C:\Users\Matt Collins\Documents\Paperboy Interactive\GameJam 2016\Temp\bin\Debug\GETween.dll
+C:\Users\Matt Collins\Documents\Paperboy Interactive\GameJam 2016\Temp\bin\Debug\GUIAnimatorFREE.dll

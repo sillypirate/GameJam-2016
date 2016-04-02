@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class GameOverButtons : MonoBehaviour {
 
 	public void buttonYes(){
-		SceneManager.LoadScene ("MainLevel");
+		GameController.gameOver = false;
+		SceneManager.LoadSceneAsync ("MainLevel");
 	}
 
 	public void buttonNo(){

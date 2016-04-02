@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F58F81C9-7ED3-7B05-CD4B-EC6FF5095B5D}</ProjectGuid>
+    <ProjectGuid>{A2198A4A-EA1B-9704-B5CB-101A1005C19A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,7 +46,10 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scritps\CamerMover.cs" />
+     <Compile Include="Assets\Scritps\GameController.cs" />
+     <Compile Include="Assets\Scritps\PlatformMover.cs" />
      <Compile Include="Assets\Scritps\PlayerMover.cs" />
+     <Compile Include="Assets\Scritps\SpawnTrigger.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -144,7 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{F56E760F-1E9B-96CC-3862-9ACF59F2C568}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{341BBD06-BC39-E784-B348-7A7A848E21E5}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -6,6 +6,7 @@ public class PlayerMover : MonoBehaviour {
 	public bool player;
 	public Rigidbody rb;
 	public GameObject self;
+	public bool top;
 
 	// Use this for initialization
 	void Start () {
@@ -15,17 +16,24 @@ public class PlayerMover : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		self.transform.Translate (Vector2.right / 20);
+		//self.transform.Translate (Vector2.right / 20);
 
 
 		if (Input.GetKeyDown (KeyCode.W)) {
 			rb.AddForce (transform.up*500);
-
 		}
+			
 
-		if (this.gameObject.transform.position.x >= 10) {
-			self.transform.position = new Vector2 (-9.5f, this.gameObject.transform.position.y);
+		//if (this.gameObject.transform.position.x >= 10) {
+		//	self.transform.position = new Vector2 (-9.5f, this.gameObject.transform.position.y);
+		//}
+
+	}
+
+	void OnTriggerEnter (Collider col){
+		if (top) {
+			Destroy (col.gameObject);
+			GameObject.Find ("Game Manager").GetComponent<GameController> ().newSpawn ();
 		}
-
 	}
 }

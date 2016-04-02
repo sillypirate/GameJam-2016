@@ -15,6 +15,8 @@ public class PlatformMover : MonoBehaviour {
 	
 		if (GameController.dashing) {
 			rate = 3;
+		} else if (GameController.guarding) {
+			rate = 0.6f;
 		} else if(GameController.gameOver){ 
 			rate = 0;
 		} else {

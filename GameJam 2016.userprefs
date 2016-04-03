@@ -1,13 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scritps\PlayerMover.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scritps\GameController.cs">
     <Files>
-      <File FileName="Assets\Scritps\PlayerMover.cs" Line="127" Column="1" />
+      <File FileName="Assets\Scritps\PlayerMover.cs" Line="146" Column="35" />
       <File FileName="Assets\Scritps\GameOverButtons.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scritps\PlatformMover.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scritps\GameController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scritps\PlatformMover.cs" Line="6" Column="1" />
+      <File FileName="Assets\Scritps\GameController.cs" Line="92" Column="51" />
       <File FileName="Assets\Scritps\KillScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scritps\Audio\ClipRandomizer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scritps\EnemyShoot.cs" Line="24" Column="33" />
+      <File FileName="Assets\Scritps\Lazer.cs" Line="27" Column="3" />
+      <File FileName="Assets\Scritps\ScoreText.cs" Line="17" Column="70" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

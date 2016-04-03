@@ -71,12 +71,15 @@
      <Compile Include="Assets\Scritps\Audio\ClipRandomizer.cs" />
      <Compile Include="Assets\Scritps\Audio\Footsteps.cs" />
      <Compile Include="Assets\Scritps\Audio\PlayerAudio.cs" />
+     <Compile Include="Assets\Scritps\EnemyShoot.cs" />
      <Compile Include="Assets\Scritps\GameController.cs" />
      <Compile Include="Assets\Scritps\GameOverButtons.cs" />
      <Compile Include="Assets\Scritps\KillScript.cs" />
+     <Compile Include="Assets\Scritps\Lazer.cs" />
      <Compile Include="Assets\Scritps\LightDND.cs" />
      <Compile Include="Assets\Scritps\PlatformMover.cs" />
      <Compile Include="Assets\Scritps\PlayerMover.cs" />
+     <Compile Include="Assets\Scritps\ScoreText.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />

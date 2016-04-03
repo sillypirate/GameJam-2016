@@ -21,6 +21,9 @@ public class GameController : MonoBehaviour {
 	public float gameOverTimer;
 	public float bgSpawnCount;
 
+	public static float score;
+	public static float scoreDisp;
+
 
 	// Use this for initialization
 	void Start () {
@@ -30,11 +33,18 @@ public class GameController : MonoBehaviour {
 		platformList[1] =  (GameObject.Find("SecondPlat"));
 		gameOverTimer = 3;
 		bgSpawnCount = 1;
+		score = 0;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
+		if (!gameOver) {
+			score += Time.deltaTime * 10;
+		}
+
+		scoreDisp = Mathf.Round (score);
 	
 		if (dashCharge < .5f) {
 			dashCharge += Time.deltaTime;
@@ -68,15 +78,18 @@ public class GameController : MonoBehaviour {
 			guarding = false;
 		}
 
-		if (Input.GetKeyDown (KeyCode.A) && !dashing && guardCharge >= .5f && !guarding) {
+		if (Input.GetKeyDown (KeyCode.A) && guardCharge >= .5f && !guarding) {
 			guarding = true;
 			guardTime = 0.5f;
 			guardCharge = 0;
+			dashing = false;
+			dashTime = 0;
 		}
 
 		if (gameOver) {
 			gameOverTimer -= Time.unscaledDeltaTime;
 			if (gameOverTimer <= 0) {
+				PlayerPrefs.SetFloat ("HighScore", scoreDisp);
 				gameOverPanel.SetActive (true);
 			}
 		}

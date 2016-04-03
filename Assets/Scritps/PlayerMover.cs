@@ -141,6 +141,12 @@ public class PlayerMover : MonoBehaviour {
 		if (col.gameObject.tag == "Hazard") {
 			youLose ();
 		}
+
+		if (col.gameObject.tag == "Lazer") {
+			if (!GameController.guarding) {
+				youLose ();
+			}
+		}
 	}
 
 	void OnCollisionEnter (Collision coll){

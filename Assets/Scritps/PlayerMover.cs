@@ -124,12 +124,20 @@ public class PlayerMover : MonoBehaviour {
 
 		if (col.gameObject.tag == "Enemy") {
 			if (GameController.dashing) {
+<<<<<<< HEAD
 				GameObject blockBreakSound = GameObject.FindGameObjectWithTag ("BlockBreakSound");
+=======
+				GameObject blockBreakSound = GameObject.Find ("BlockBreakSound");
+>>>>>>> origin/master
 				if (blockBreakSound) {
 					if (top) {
 						blockBreakSound.GetComponent<ClipRandomizer> ().playRandomClip ();
 					} else {
+<<<<<<< HEAD
 						blockBreakSound.GetComponent<ClipRandomizer> ().playRandomClipDelayed ();
+=======
+						blockBreakSound.GetComponent<ClipRandomizer> ().playRandomClipDelayed (); 
+>>>>>>> origin/master
 					}
 				}
 				Destroy (col.gameObject);

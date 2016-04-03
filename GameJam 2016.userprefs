@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scritps\GameController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scritps\PlayerMover.cs">
     <Files>
       <File FileName="Assets\Scritps\GameOverButtons.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scritps\PlayerMover.cs" Line="20" Column="30" />
+      <File FileName="Assets\Scritps\PlayerMover.cs" Line="88" Column="118" />
       <File FileName="Assets\Scritps\PlatformMover.cs" Line="19" Column="16" />
-      <File FileName="Assets\Scritps\GameController.cs" Line="97" Column="27" />
+      <File FileName="Assets\Scritps\GameController.cs" Line="51" Column="67" />
+      <File FileName="Assets\Scritps\KillScript.cs" Line="23" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -18,6 +18,8 @@ public class PlayerMover : MonoBehaviour {
 	public GameObject dashAnim;
 	public GameObject slideAnim;
 	public GameObject guardAnim;
+	public GameObject dusty;
+	public GameObject dusty2;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +36,9 @@ public class PlayerMover : MonoBehaviour {
 			rb.AddForce (transform.up*500);
 			sliding = false;
 			slideTime = 0;
+			if (onGround) {
+				Instantiate (dusty2, new Vector3 (self.transform.position.x-0.5f, self.transform.position.y-0.5f, self.transform.position.z), new Quaternion(-90, 70, 100, 0));
+			}
 		}
 
 		if (GameController.dashing) {
@@ -80,13 +85,17 @@ public class PlayerMover : MonoBehaviour {
 			sliding = false;
 		}
 
-		if (Input.GetKeyDown (KeyCode.D)){
+		if (Input.GetKeyDown (KeyCode.D) && GameObject.Find("Game Manager").GetComponent<GameController>().dashCharge >=.5f){
 			slideTime = 0;
+			Instantiate (dusty2, new Vector3 (self.transform.position.x-0.5f, self.transform.position.y-0.5f, self.transform.position.z), new Quaternion(-90, 70, 100, 0));
 		}
 
 		if (Input.GetKeyDown (KeyCode.S) && !sliding) {
 			sliding = true;
 			slideTime = 1f;
+			if (onGround) {
+				Instantiate (dusty,new Vector3 (self.transform.position.x-0.5f, self.transform.position.y, self.transform.position.z), new Quaternion(-90, 70, 100, 0));
+			}
 		}
 
 			

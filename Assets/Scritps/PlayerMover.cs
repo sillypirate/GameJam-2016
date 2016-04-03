@@ -75,10 +75,10 @@ public class PlayerMover : MonoBehaviour {
 
 
 		if (sliding) {
-			selfB.size = new Vector3 (.8f, 0.5f, 1);
+			selfB.size = new Vector3 (.8f, 0.8f, 1);
 			slideTime -= Time.deltaTime;
 		} else {
-			selfB.size = new Vector3 (.8f, 1f, 1);
+			selfB.size = new Vector3 (.8f, 1.4f, 1);
 		}
 
 		if (slideTime <= 0) {
@@ -124,6 +124,14 @@ public class PlayerMover : MonoBehaviour {
 
 		if (col.gameObject.tag == "Enemy") {
 			if (GameController.dashing) {
+				GameObject blockBreakSound = GameObject.FindGameObjectWithTag ("BlockBreakSound");
+				if (blockBreakSound) {
+					if (top) {
+						blockBreakSound.GetComponent<ClipRandomizer> ().playRandomClip ();
+					} else {
+						blockBreakSound.GetComponent<ClipRandomizer> ().playRandomClipDelayed ();
+					}
+				}
 				Destroy (col.gameObject);
 			} else {
 				youLose ();

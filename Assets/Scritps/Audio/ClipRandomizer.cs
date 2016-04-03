@@ -51,6 +51,6 @@ public class ClipRandomizer : MonoBehaviour {
 	}
 
 	public void playRandomClipDelayed(){
-		Invoke ("playRandomClip", 0.2f);
+		Invoke ("playRandomClip", 0.05f);
 	}
 }
